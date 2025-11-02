@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"HoloStickerAssetSprite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"HoloStickerAssetSprite",
+  "parent":{
+    "name":"HoloSticker",
+    "path":"folders/HoloSticker.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

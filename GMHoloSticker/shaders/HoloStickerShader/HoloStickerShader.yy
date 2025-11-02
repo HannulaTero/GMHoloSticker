@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"HoloStickerShader",
+  "name":"HoloStickerShader",
+  "parent":{
+    "name":"HoloSticker",
+    "path":"folders/HoloSticker.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}
