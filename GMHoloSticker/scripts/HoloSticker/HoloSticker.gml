@@ -28,6 +28,10 @@
 *
 * -> Note you need to supply scaling factor, if mask is not on same scale as base image.
 * 
+* Alphatest is required for 3D, as transparency can cause issues in general.
+* -> You can set specific alphatest per HoloSticker.
+* -> Use negative alphatest to disable it.
+* 
 * @param {Struct.HoloStickerAsset} _base Base color
 * @param {Struct.HoloStickerAsset} _mask Holomask, marking the effect.
 * @param {Struct.HoloStickerAsset} _spec Holospectrum, effect color.
@@ -69,6 +73,11 @@ function HoloSticker(_base, _mask, _spec, _maskScale=1.0) constructor
   self.offset = [ 0.0, 0.0 ];
   
   
+  // Alphatest - cutoff value.
+  // Negative value for disabling the alpha test.
+  self.alphaTest = 254.0 / 255.0; 
+  
+  
   // Check whether remapping is required.
   // -> Remapping is required whenever base coordinates are not 1to1 with mask.
   self.remapping = { };
@@ -83,16 +92,11 @@ function HoloSticker(_base, _mask, _spec, _maskScale=1.0) constructor
   * Applies holoeffect-shader.
   * Given method parameters is the base-asset, such as sprite (spr, img)
   * 
-  * Alphatest is required for 3D, as transparency break things.
-  * Use negative alphatest to disable it.
-  * 
   * @param {Function} _method
-  * @param {Real} _alphatest  
   */
-  static Draw = function(_method, _alphatest=254.0 / 255.0)
+  static Draw = function(_method)
   {
     self.Begin();
-    self.AlphaTest(_alphatest);
     self.base.Draw(_method);
     self.End();
     return self;
@@ -132,6 +136,7 @@ function HoloSticker(_base, _mask, _spec, _maskScale=1.0) constructor
     shader_set_uniform_f_array(self.FSH_maskUV, self.mask.uvs);
     shader_set_uniform_f_array(self.FSH_specUV, self.spec.uvs);
     shader_set_uniform_f_array(self.FSH_holoOffset, self.offset);
+	shader_set_uniform_f(self.FSH_alphaTest, self.alphaTest);
     
     // Update position based on the camera.
     if (_camera != -1)
@@ -176,7 +181,6 @@ function HoloSticker(_base, _mask, _spec, _maskScale=1.0) constructor
   {
     self.offset[0] = _x;
     self.offset[1] = _y;
-    shader_set_uniform_f_array(self.FSH_holoOffset, self.offset);
     return self;
   };
   
@@ -190,9 +194,9 @@ function HoloSticker(_base, _mask, _spec, _maskScale=1.0) constructor
   * 
   * @param {Real} _alpha
   */ 
-  static AlphaTest = function(_alpha=-1)
+  static SetAlphaTest = function(_alphaTest=-1)
   {
-    shader_set_uniform_f(self.FSH_alphaTest, _alpha);
+    self.alphaTest = _alphaTest;
     return self;
   };
   

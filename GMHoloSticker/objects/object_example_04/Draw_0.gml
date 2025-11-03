@@ -1,8 +1,6 @@
 /// @desc DRAW HOLO.
 
-holo.Draw(Draw3D);
+holo.Draw(Draw3DScale);
 DrawShadow();
-
-
 
 

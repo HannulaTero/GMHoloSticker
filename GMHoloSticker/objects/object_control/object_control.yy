@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"object_example_control",
+  "%Name":"object_control",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"object_example_control",
+  "name":"object_control",
   "overriddenProperties":[],
   "parent":{
-    "name":"HoloStickerExample",
-    "path":"folders/HoloStickerExample.yy",
+    "name":"Level",
+    "path":"folders/HoloStickerExample/Level.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,7 +1,12 @@
 
 
 depth = -1000;
-gpu_set_ztestenable(true);  // Because in 3D.
+
+
+// Because in 3D.
+gpu_set_ztestenable(true);
+gpu_set_alphatestenable(true);
+gpu_set_alphatestref(128);
 
 
 // Camera position and target.
@@ -16,7 +21,7 @@ zfar = 65536.0;
 
 xat = x;
 yat = y;
-zat = -100.0;
+zat = -250.0;
 
 xto = xat + 1.0;
 yto = yat;

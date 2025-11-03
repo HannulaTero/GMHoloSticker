@@ -1,3 +1,5 @@
+// Derivatives are required, as regular sprites don't have them.
+#extension GL_OES_standard_derivatives : enable
 
 
 

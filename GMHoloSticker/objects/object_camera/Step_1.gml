@@ -13,7 +13,7 @@ if (keyboard_check_pressed(vk_tab) == true)
   var _dy = real(keyboard_check(ord("D"))) - real(keyboard_check(ord("A")));
   var _dir = point_direction(0, 0, _dx, _dy);
   var _len = point_distance(0, 0, _dx, _dy);
-  var _spd = (keyboard_check(vk_shift) == false) ? 16.0 : 8.0;
+  var _spd = (keyboard_check(vk_shift) == false) ? 6.0 : 16.0;
   
   if (_len > 0.0)
   {

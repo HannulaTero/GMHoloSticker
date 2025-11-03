@@ -10,8 +10,8 @@
   "name":"object_camera",
   "overriddenProperties":[],
   "parent":{
-    "name":"HoloStickerExample",
-    "path":"folders/HoloStickerExample.yy",
+    "name":"Level",
+    "path":"folders/HoloStickerExample/Level.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -9,8 +9,8 @@
   "name":"object_example_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"HoloStickerExample",
-    "path":"folders/HoloStickerExample.yy",
+    "name":"Examples",
+    "path":"folders/HoloStickerExample/Examples.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_example_icon",
+    "path":"sprites/spr_example_icon/spr_example_icon.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

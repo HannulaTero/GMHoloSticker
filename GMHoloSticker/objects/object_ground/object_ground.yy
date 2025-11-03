@@ -1,21 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"object_example_03",
+  "%Name":"object_ground",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"object_example_03",
+  "name":"object_ground",
   "overriddenProperties":[],
   "parent":{
-    "name":"Examples",
-    "path":"folders/HoloStickerExample/Examples.yy",
+    "name":"Level",
+    "path":"folders/HoloStickerExample/Level.yy",
   },
-  "parentObjectId":{
-    "name":"object_example_parent",
-    "path":"objects/object_example_parent/object_example_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_example_icon",
-    "path":"sprites/spr_example_icon/spr_example_icon.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

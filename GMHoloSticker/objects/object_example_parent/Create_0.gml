@@ -1,8 +1,8 @@
-/// @desc .
+/// @desc INITIALIZATION.
 
 image_angle = random(360);
 
-z = 0;
+z = -200;
 
 
 Draw3D = function(_spr, _img)
@@ -24,4 +24,11 @@ Draw3D = function(_spr, _img)
   matrix_set(matrix_world, transform);
   draw_sprite(_spr, _img, 0, 0);
   matrix_set(matrix_world, identity);
+};
+
+
+DrawShadow = function()
+{
+  gpu_set_depth(-4);
+  draw_sprite_ext(sprite_shadow, 0, x, y, 2, 2, 0, c_white, 1.0);
 }

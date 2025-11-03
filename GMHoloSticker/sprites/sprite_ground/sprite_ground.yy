@@ -44,8 +44,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"HoloStickerExample",
-    "path":"folders/HoloStickerExample.yy",
+    "name":"Level",
+    "path":"folders/HoloStickerExample/Level.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
